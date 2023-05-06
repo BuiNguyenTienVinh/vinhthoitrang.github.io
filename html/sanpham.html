@@ -10,7 +10,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/trangchu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js"></script>
+    <script src="../js/js.js"></script>
 </head>
 <div id="wrapper">
     <header>
@@ -19,7 +19,7 @@
                 <img src="../img/lg.png" height="150px">
             </a>
         </div>
-        <a href="../html/giohang.html">
+        <a data-target="#modalgiohang" data-toggle="modal">
             <div id="giohang"  >
                 <center><i class="fa fa-shopping-bag fa-2x" ></i></center>
             </div>
@@ -76,7 +76,7 @@
                         <div class="sp-hang">
                             <div class="sp-hinhsp">
                                 <a href="" data-toggle="modal" data-target="#myModal1">
-                                    <img src="../img/ao1.jpg" alt="" class="sp-h1"  >
+                                    <img src="../img/ao1.jpg" alt="" class="sp-h1">
                                     <img src="../img/ao1sau.jpg"  alt="" class="sp-h2" >
                                 </a>
                                 <div class="sp-tensp">
@@ -162,7 +162,7 @@
                                 <img src="../img/aopolo2.jpg" alt="" class="sp-h2" >
                             </a>
                             <div class="sp-tensp">
-                                <p>Áo polo Wison 2 màu trắng và neon chính hãng<br>
+                                <p>Áo polo Wison 2 màu trắng và navi chính hãng<br>
                                     <span>350,000<span style="text-decoration: underline;" >đ</span></span>
                                 </p>
                             </div>
@@ -402,6 +402,28 @@
 </footer> 
 </div>
 <!------------------------------------------------------------------------------------------------------->
+<div id="modalgiohang" class="modal fade" role="dialog"> 
+    <div class="modal-dialog">
+        <div class="modal-content" role="document">
+            <div class="modal-header" style="background-color: rgb(43, 42, 42) ; color: #ff7c02;">
+                <center><h3>Sản phẩm trong giỏ</h3></center>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered" id="tblgio">
+                    <tr>
+                        <td>Sản phẩm</td>
+                        <td>Thông tin</td>
+                        <td>Số lượng</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <a href="../html/giohang.html">Đi đến giỏ hàng <i class="fa fa-reply"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="myModal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> 
     <div class="modal-dialog">
         <div class="modal-content" role="document">
@@ -411,15 +433,15 @@
                 </div>
             </div>
             <div class="modal-body">
-                <form action="">
+                <form action="" onsubmit="themvaogiohang()">
                 <div class="col-12">
                     <div class="form-group">
                         <div class="form-group row">
                             <div class="col-sm-5">
-                                <img src="../img/ao1.jpg" alt="" width="100%">
+                                <img src="../img/ao1.jpg" alt="" width="100%" id="ao1">
                             </div>
                             <div class="col-sm-7">
-                                <span style="color: red; font-size: 25px;">350.000<u>đ</u></span>
+                                <span style="color: red; font-size: 25px;" id="tt1">350.000<u>đ</u></span>
                                 <hr>
                                 <label for="size" >Kích thước</label>
                                 <select name="size" id="size" class="form-control" style="width: 50%;">
@@ -429,15 +451,17 @@
                                     <option value="">XL</option>
                                 </select>
                                 <label for="number">Số lượng</label>
-                                <input type="number" name="number"class="form-control" style="width: 20%;" >
+                                <input type="number" name="number"class="form-control" style="width: 20%;" id="sl1" >
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
-                            <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
-                            <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                        <center>
+                            <button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
+                                <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
+                                <b style="float: right;">Thêm vào giỏ hàng</b>
+                            </button>
+                            <span>Hoặc xem <a href="../html/aothun-1-2.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -482,7 +506,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/aothun-1-2.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -527,7 +551,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/swt.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -572,7 +596,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/non.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -662,7 +686,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/aothun-3.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -707,7 +731,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/hoodie-1.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -738,10 +762,7 @@
                                 <hr>
                                 <label for="size" >Kích thước</label>
                                 <select name="size" id="size" class="form-control" style="width: 50%;">
-                                    <option value="">S</option>
-                                    <option value="">M</option>
-                                    <option value="">L</option>
-                                    <option value="">XL</option>
+                                    <option value="">Free Size</option>
                                 </select>
                                 <label for="number">Số lượng</label>
                                 <input type="number" name="number"class="form-control" style="width: 20%;" >
@@ -752,7 +773,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/tui.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -797,7 +818,7 @@
                         <center><button onclick="btnaddcart()" id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/aothun-all.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -842,7 +863,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/aothun-all.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -887,7 +908,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/aothun-all.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -932,7 +953,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/dep.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -977,7 +998,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/dep.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -1022,7 +1043,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/aothun-all.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -1053,10 +1074,7 @@
                                 <hr>
                                 <label for="size" >Kích thước</label>
                                 <select name="size" id="size" class="form-control" style="width: 50%;">
-                                    <option value="">S</option>
-                                    <option value="">M</option>
-                                    <option value="">L</option>
-                                    <option value="">XL</option>
+                                    <option value="">Free Size</option>
                                 </select>
                                 <label for="number">Số lượng</label>
                                 <input type="number" name="number"class="form-control" style="width: 20%;" >
@@ -1067,7 +1085,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/tui.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -1098,10 +1116,7 @@
                                 <hr>
                                 <label for="size" >Kích thước</label>
                                 <select name="size" id="size" class="form-control" style="width: 50%;">
-                                    <option value="">S</option>
-                                    <option value="">M</option>
-                                    <option value="">L</option>
-                                    <option value="">XL</option>
+                                    <option value="">Free Size</option>
                                 </select>
                                 <label for="number">Số lượng</label>
                                 <input type="number" name="number"class="form-control" style="width: 20%;" >
@@ -1112,7 +1127,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/tui.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>

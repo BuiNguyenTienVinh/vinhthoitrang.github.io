@@ -10,10 +10,10 @@
     <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/trangchu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../js/js.js"></script>
+    <script src="script.js"></script>
     <script src="../js/sanpham.js"></script>
 </head>
-<div id="wrapper">
+<div id="container">
     <header>
         <div id="logo">
             <a href="../index.html" >
@@ -28,7 +28,7 @@
         <div id="ttll">
                 <center style="margin-bottom: 10px;">
                     <i>🕻.035.2517787</i> | 
-                    <a href="../html/dangnhap.html"   > ĐĂNG KÍ </a> | 
+                    <a href="../html/dangnhap.html"> ĐĂNG KÍ </a> | 
                     <a href="../html/dangnhap.html">ĐĂNG NHẬP</a>
                 </center>
                 <hr>
@@ -45,27 +45,28 @@
             <ul><a href="../html/gioithieu.html">GIỚI THIỆU</a></ul>
         </div>
         <div>
-            <form action="" class="search" method="post">
-            <input type="text" class="searchTerm form" placeholder="Tìm kiếm..."  >
-            <button type="submit" class="searchButton">Tìm</button>
+            <form onsubmit="timkiem()" class="search" >
+            <input type="text" class="searchTerm form" id="search-input" placeholder="Tìm kiếm..."  >
+            <input type="submit" class="searchButton"value="Tìm">
             </form>
         </div>
     </nav>
     <!--------------------------------------------BODY------------------------------------------------------------------------------------------------>
-    <body>
-        <div class="hinhlon">
+    <div class="body">
+        <div class="">
             <a href="../html/sanpham.html" >
-                <div class="ul1">
-                    SHOP THỜI TRANG 
-                </div>
-                <div id="xemngay">
-                    <p>XEM NGAY</p>
+                <div class="hinhlon">
+                    
+                        <div class="ul1">
+                            <span>SHOP THỜI TRANG </span>
+                        </div>
+                        <div id="xemngay">
+                            <p>XEM NGAY</p>
+                        </div> 
+                        
                 </div> 
-                <div id="hinh1">
-                    <img id="hinh1" src="../img/slideshow_2.webp">
-                </div>
-            </a>
-        </div> 
+                </a>
+        </div>
     <hr><br>
         <div style="border-bottom:dashed 1px  ;">
             <center><p style="color: #ff7c02;"><i class='fa fa-fire'></i> HOT <i class='fa fa-fire'></i></p><br>
@@ -73,143 +74,148 @@
             </center><br>   
         </div>
     
-            <div class="giuatrang">
-                <div class="block">
-                    <div class="hang">
-                        <div class="hinhsp">
-                            <a href="" data-toggle="modal" data-target="#myModal1">
-                                <img src="../img/ao1.jpg" alt="" class="h1"  >
-                                <img src="../img/ao1sau.jpg"  alt="" class="h2" >
-                            </a>
-                            <div class="tensp">
-                                <p>Áo thun MLB in hình chữ B màu trắng<br>
-                                    <span>350,000<span style="text-decoration: underline;" >đ</span></span>
-                                </p>
+            <div class="row giuatrang">
+                <div class=" col-12">
+                    <div class="block col-sm-3" data-keywords="áo thun, áo, mlb">
+                        <div class="hang">
+                            <div class="hinhsp">
+                                <a href="" data-toggle="modal" data-target="#myModal1">
+                                    <img src="../img/ao1.jpg" alt="" class="h1"  >
+                                    <img src="../img/ao1sau.jpg"  alt="" class="h2" >
+                                </a>
+                                <div class="tensp">
+                                    <p>Áo thun MLB in hình chữ B màu trắng<br>
+                                        <span>350,000<span style="text-decoration: underline;" >đ</span></span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-    
-                <div class="block">
-                    <div class="hang">
-                        <div class="hinhsp">
-                            <a href=""  data-toggle="modal" data-target="#myModal2">
-                                <img src="../img/ao2.jpg" alt="" class="h1">
-                                <img src="../img/ao2sau.jpg" alt="" class="h2">
-                            </a>
-                            <div class="tensp">
-                                <p>Áo thun MLB in hình chữ B màu đen<br>
-                                    <span>350,000<span style="text-decoration: underline;" >đ</span></span>
-                                </p>
+                    <div class="block col-sm-3">
+                        <div class="hang">
+                            <div class="hinhsp">
+                                <a href=""  data-toggle="modal" data-target="#myModal2">
+                                    <img src="../img/ao2.jpg" alt="" class="h1">
+                                    <img src="../img/ao2sau.jpg" alt="" class="h2">
+                                </a>
+                                <div class="tensp">
+                                    <p>Áo thun MLB in hình chữ B màu đen<br>
+                                        <span>350,000<span style="text-decoration: underline;" >đ</span></span>
+                                    </p>
+                                </div>
                             </div>
+                            
                         </div>
-                        
                     </div>
-                </div>
+                    
+                    <div class="block col-sm-3">
+                        <div class="hang">
+                            <div class="hinhsp">
+                                <a href="" data-toggle="modal" data-target="#myModal3">
+                                    <img src="../img/swt1.jpg" alt="" class="h1" >
+                                    <img src="../img/swt1sau.jpg" alt="" class="h2" >
+                                </a>
+                                <div class="tensp">
+                                    <p>Áo Sweater MLB in hình chữ B màu đen<br>
+                                        <span>550,000<span style="text-decoration: underline;" >đ</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="block col-sm-3">
+                        <div class="hang">
+                            <div class="hinhsp">
+                                <a href="" data-toggle="modal" data-target="#myModal4">
+                                    <img src="../img/non1.jpg" alt="" class="h1" >
+                                    <img src="../img/non2.jpg" alt="" class="h2" >
+                                </a>
+                                <div class="tensp">
+                                    <p>Nón thời trang MLB + NY chính hãng<br>
+                                        <span>400,000<span style="text-decoration: underline;" >đ</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 
-                <div class="block">
-                    <div class="hang">
-                        <div class="hinhsp">
-                            <a href="" data-toggle="modal" data-target="#myModal3">
-                                <img src="../img/swt1.jpg" alt="" class="h1" >
-                                <img src="../img/swt1sau.jpg" alt="" class="h2" >
-                            </a>
-                            <div class="tensp">
-                                <p>Áo Sweater MLB in hình chữ B màu đen<br>
-                                    <span>550,000<span style="text-decoration: underline;" >đ</span></span>
-                                </p>
+                
+                
+                    <div class="block col-sm-3">
+                        <div class="hang">
+                            <div class="hinhsp">
+                                <a href="" data-toggle="modal" data-target="#myModal5">
+                                    <img src="../img/ao3.jpg" alt="" class="h1" >
+                                    <img src="../img/ao3sau.jpg" alt="" class="h2">
+                                </a>
+                                <div class="tensp">
+                                    <p>Áo Champion chính hãng màu đen<br>
+                                        <span>450,000<span style="text-decoration: underline;" >đ</span></span>
+                                    </p>
+                                </div>
                             </div>
+                            
                         </div>
-                        
+                    </div>
+                    <div class="block col-sm-3">
+                        <div class="hang">
+                            <div class="hinhsp">
+                                <a href="" data-toggle="modal" data-target="#myModal6">
+                                    <img src="../img/aopolo.jpg" alt="" class="h1" >
+                                    <img src="../img/aopolo2.jpg" alt="" class="h2" >
+                                </a>
+                                <div class="tensp">
+                                    <p>Áo polo Wison 2 màu trắng và navy chính hãng<br>
+                                        <span>350,000<span style="text-decoration: underline;" >đ</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="block col-sm-3">
+                        <div class="hang">
+                            <div class="hinhsp">
+                                <a href="" data-toggle="modal" data-target="#myModal7">
+                                    <img src="../img/hd2.jpg" alt="" class="h1" >
+                                    <img src="../img/hd1.png" alt="" class="h2" >
+                                </a>
+                                <div class="tensp">
+                                    <p>Áo Hoodie Enssentials FEAR OF GOD chính hãng<br>
+                                        <span>1,750,000<span style="text-decoration: underline;" >đ</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="block col-sm-3">
+                        <div class="hang">
+                            <div class="hinhsp">
+                                <a href="" data-toggle="modal" data-target="#myModal8">
+                                    <img src="../img/balo2.jpg" alt="" class="h1" >
+                                    <img src="../img/balo.jpg" alt="" class="h2" >
+                                </a>
+                                <div class="tensp">
+                                    <p>Balo Nike chính hãng màu đen size lớn<br>
+                                        <span>1,550,000<span style="text-decoration: underline;" >đ</span></span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
-                <div class="block">
-                    <div class="hang">
-                        <div class="hinhsp">
-                            <a href="" data-toggle="modal" data-target="#myModal4">
-                                <img src="../img/non1.jpg" alt="" class="h1" >
-                                <img src="../img/non2.jpg" alt="" class="h2" >
-                            </a>
-                            <div class="tensp">
-                                <p>Nón thời trang MLB + NY chính hãng<br>
-                                    <span>400,000<span style="text-decoration: underline;" >đ</span></span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="hang">
-                        <div class="hinhsp">
-                            <a href="" data-toggle="modal" data-target="#myModal5">
-                                <img src="../img/ao3.jpg" alt="" class="h1" >
-                                <img src="../img/ao3sau.jpg" alt="" class="h2">
-                            </a>
-                            <div class="tensp">
-                                <p>Áo Champion chính hãng màu đen<br>
-                                    <span>450,000<span style="text-decoration: underline;" >đ</span></span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="hang">
-                        <div class="hinhsp">
-                            <a href="" data-toggle="modal" data-target="#myModal6">
-                                <img src="../img/aopolo.jpg" alt="" class="h1" >
-                                <img src="../img/aopolo2.jpg" alt="" class="h2" >
-                            </a>
-                            <div class="tensp">
-                                <p>Áo polo Wison 2 màu trắng và neon chính hãng<br>
-                                    <span>350,000<span style="text-decoration: underline;" >đ</span></span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="hang">
-                        <div class="hinhsp">
-                            <a href="" data-toggle="modal" data-target="#myModal7">
-                                <img src="../img/hd2.jpg" alt="" class="h1" >
-                                <img src="../img/hd1.png" alt="" class="h2" >
-                            </a>
-                            <div class="tensp">
-                                <p>Áo Hoodie Enssentials FEAR OF GOD chính hãng<br>
-                                    <span>1,750,000<span style="text-decoration: underline;" >đ</span></span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="hang">
-                        <div class="hinhsp">
-                            <a href="" data-toggle="modal" data-target="#myModal8">
-                                <img src="../img/balo2.jpg" alt="" class="h1" >
-                                <img src="../img/balo.jpg" alt="" class="h2" >
-                            </a>
-                            <div class="tensp">
-                                <p>Balo Nike chính hãng màu đen size lớn<br>
-                                    <span>1,550,000<span style="text-decoration: underline;" >đ</span></span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+            </div>
                 <div class="chuyentrang">
                     <a href="../html/sanpham.html">
                             <p>Xem thêm</p>
                     </a>
                 </div>
-            </div>
-    </body>
+            
+    </div>
 <!-----------------------------------------------FOOTER--------------------------------------------------------------------------------------->
     <footer class="footer">
         
@@ -316,11 +322,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">addToCart()
+                    <div class="form-group">
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/aothun-1-2.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -365,7 +371,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/aothun-1-2.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -410,7 +416,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/swt.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -455,7 +461,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/non.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -500,7 +506,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/aothun-all.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -545,7 +551,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/aothun-3.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -590,7 +596,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/hoodie-1.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
@@ -635,7 +641,7 @@
                         <center><button id="form-button" class="form-control" style="width: 35%; height: 50px; background-color: rgb(43, 42, 42); color: #ff7c02;" >
                             <i class="fa fa-shopping-cart" style="font-size:20px;float: left; background-color: ;"></i>
                             <b style="float: right;">Thêm vào giỏ hàng</b></button>
-                            <span>Hoặc xem <a href="" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
+                            <span>Hoặc xem <a href="../html/tui.html" style="color: #ff7c02; text-decoration: none;">chi tiết</a></span>
                         </center>
                     </div>
                 </div>
